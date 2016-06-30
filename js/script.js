@@ -1,4 +1,14 @@
-for (var i = 1; i <= 100; i++) {
+function fizzBuzzInput() {
+    var input = prompt('Please enter a number between 1 and 100')
+    if (input % 1 != 0) {
+        return fizzBuzzInput();
+    }
+    return parseInt(input);
+}
+
+var continueUntil = fizzBuzzInput();
+
+for (var i = 1; i <= continueUntil; i++) {
     if (i % 3 == 0 && i % 5 == 0) {
         document.write("fizzbuzz");
         document.write("<br>");
@@ -12,4 +22,4 @@ for (var i = 1; i <= 100; i++) {
         document.write(i);
         document.write("<br>");
     }
-};
+}
