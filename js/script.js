@@ -1,6 +1,6 @@
 function fizzBuzzInput() {
-    var input = prompt('Please enter a number between 1 and 100')
-    if (input % 1 != 0) {
+    var input = prompt('Please enter a number between 1 and 100');
+    if (input == 0 || isNaN(input)) {
         return fizzBuzzInput();
     }
     return parseInt(input);
